@@ -1,0 +1,46 @@
+import java.util.scanner;
+public class fingerprint {
+    public static void main(String[]args) {
+        // Membuat Variable dan scanner
+        boolean tekan = true;
+        int counter = 0;        
+    }
+    void setup() {
+        Serial.begin(9600);
+        finger.begin(57600);
+      
+        if (finger.verifyPassword()) {
+          Serial.println("FingerPrint Sensor Ditemukan!");
+        } else {
+          Serial.println("FingerPrint Sensor Tidak Ditemukan! :(");
+          while (1) {
+            delay(1);
+          }
+        }
+    void loop() {
+         FINGERPRINT();
+        }
+     void Enroll() {
+        Serial.println("Siap Mendaftarkan fingerprint!");
+        Serial.println("Please type in the ID # (from 1 to 127) you want to save this finger as...");
+        id = readnumber();
+        if (id == 0) {
+            return;
+        }
+        Serial.print("Dapatkan ID #");
+        Serial.println(id);
+          
+        
+        void setup() {
+            Serial.begin(9600);
+            finger.begin(57600);
+          
+            if (finger.verifyPassword()) {
+              Serial.println("FingerPrint Sensor Ditemukan!");
+            } 
+            else {
+              Serial.println("FingerPrint Sensor Tidak Ditemukan! :(")
+              tekan=false;
+            }
+            counter++;    
+}
